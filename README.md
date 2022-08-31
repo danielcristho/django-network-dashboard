@@ -1,1 +1,1 @@
-### Network automation web-base using django&paramiko
+### Network automation dashboard using Django and Paramiko
