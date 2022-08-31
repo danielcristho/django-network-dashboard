@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'django_network_autmation.urls'
+ROOT_URLCONF = 'dashboard.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_network_autmation.wsgi.application'
+WSGI_APPLICATION = 'dashboard.wsgi.application'
 
 
 # Database
