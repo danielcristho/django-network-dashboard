@@ -43,6 +43,8 @@ def configure(request):
                 
                 if dev.vendor.lower() == 'cisco':
                     conn = ssh_client.invoke_shell()
+                    conn.send('enable\n')
+                    conn.send('admin\n')
                     conn.send("configure terminal\n")
                     for cmd in cisco_command:
                         conn.send(cmd + "\n")
@@ -87,8 +89,6 @@ def verify_config(request):
                         result.append(stdout.read().decode())
                     else:
                         conn = ssh_client.invoke_shell()
-                        conn.send('enable\n')
-                        conn.send('admin\n')
                         conn.send('terminal length 0\n')
                         for cmd in cisco_command:
                             result.append("Result on {}".format(dev.ip_address))
