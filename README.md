@@ -1,2 +1,3 @@
 # Network automation dashboard using Django and Paramiko
-## Configure Cisco and Mikrotik Device
+
+## You should use CHR and IOS Router
